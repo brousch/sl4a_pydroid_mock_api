@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+NEWS.txt
+README.rst
+ROADMAP.txt
+SIMULATED_FUNCTIONS.txt
+setup.py
+src/android/__init__.py
+src/sl4a_pydroid_mock_api.egg-info/PKG-INFO
+src/sl4a_pydroid_mock_api.egg-info/SOURCES.txt
+src/sl4a_pydroid_mock_api.egg-info/dependency_links.txt
+src/sl4a_pydroid_mock_api.egg-info/entry_points.txt
+src/sl4a_pydroid_mock_api.egg-info/not-zip-safe
+src/sl4a_pydroid_mock_api.egg-info/requires.txt
+src/sl4a_pydroid_mock_api.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+NEWS.txt
+README.rst
+ROADMAP.txt
+SIMULATED_FUNCTIONS.txt
+setup.py
+src/android/__init__.py
+src/android.egg-info/PKG-INFO
+src/android.egg-info/SOURCES.txt
+src/android.egg-info/dependency_links.txt
+src/android.egg-info/entry_points.txt
+src/android.egg-info/not-zip-safe
+src/android.egg-info/requires.txt
+src/android.egg-info/top_level.txt

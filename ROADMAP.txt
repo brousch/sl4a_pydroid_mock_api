@@ -1,0 +1,5 @@
+Roadmap for sl4a_pydroid_api
+============================
+
+1. Implement functions as I need them to the level of usefulness I need them.
+2. Add your contributions!

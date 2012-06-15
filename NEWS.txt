@@ -1,0 +1,14 @@
+News
+====
+
+0.1
+---
+
+*Release date: 15-Jun-2012*
+
+* This initial release of the project includes a working implementation of the 
+  **ttsSpeak** method using PyTTSx. It also includes partial implementations 
+  of the **ttsIsSpeaking** and **recognizeSpeech** functions. See the 
+  SIMULATED_FUNCTIONS.TXT file for more details.
+  
+

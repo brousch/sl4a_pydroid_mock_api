@@ -1,0 +1,1 @@
+http://github.com/parente/pyttsx/zipball/master#egg=pyttsx-1.1

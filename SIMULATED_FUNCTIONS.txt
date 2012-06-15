@@ -1,0 +1,32 @@
+Status of Various Simulated Functions
+=====================================
+
+recognizeSpeech
+---------------
+
+*Partial
+At this time, recognizeSpeech does not attempt to actually recognize any speech.
+It prompts you for a string to return as though speech had been recognized. You
+can reply with any string you want, which is useful for seeing how your code
+handes correctly and incorrectly recognized speech. Improving this function to
+actually use Google's speech recognition engine would be awesome.
+
+ttsIsSpeaking
+-------------
+
+*Partial
+The function ttsIsSpeaking simulated checks to see whether ttsSpeak has
+finished saying something. It returns True if ttsSpeak is done, and False if it 
+is still speaking. The simulated function returns True or False at random, so
+it lets you know that your code running the function has processed, but it
+doesn't actually perform a check. This might be improved in the future.
+
+ttsSpeak
+--------
+
+*Complete
+Uses the PyTTSx module to provide text to speech on your computer. PyTTSx
+requires that you have an external TTS library or program installed. On Linux, 
+this is espeak. On OSX this is the NSSpeechSynthesizer. On Windows this is
+SAPI5.
+
