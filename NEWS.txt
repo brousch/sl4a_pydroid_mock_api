@@ -1,6 +1,15 @@
 News
 ====
 
+0.2
+---
+
+*Release date: 16-Jul-2012*
+
+* Added support for makeToast via a Tkinter window.
+* Added a shim module for TTS on OSX since I couldn't get PyTTSx working
+  outside of the OSX system Python.
+
 0.1
 ---
 

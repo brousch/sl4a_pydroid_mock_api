@@ -1,6 +1,13 @@
 Status of Various Simulated Functions
 =====================================
 
+makeToast
+---------
+
+*Complete
+Pops up a Tkinter window in the middle of your screen for 5 seconds. The window
+contains the message you've specified.
+
 recognizeSpeech
 ---------------
 

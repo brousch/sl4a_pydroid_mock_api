@@ -1,11 +1,17 @@
 import random
 import time
+import sys
 from collections import namedtuple
 
-import pyttsx
+import toast
 
 # Initialize tts engine
-tts_engine = pyttsx.init()
+if sys.platform == "darwin":
+    import tts_osx
+    tts_engine = tts_osx.TtsEngine()
+else:
+    import pyttsx
+    tts_engine = pyttsx.init()
 
 
 # Pause for a little while for a more realistic experience from some methods
@@ -34,6 +40,11 @@ def get_id():
 
 class Android():
     
+    def makeToast(self, message):
+        ''' Pops up a Tkinter window with the message for 5 seconds'''
+        toast.show_toast(message)
+        
+    
     def ttsIsSpeaking(self):
         still_speaking = random.choice((False, True))
         if still_speaking:
@@ -44,8 +55,6 @@ class Android():
         
         
     def ttsSpeak(self, message):
-        print "\n*** IMAGINE THE FOLLOWING WORDS SPOKEN OUT LOUD ***"
-        print message
         tts_engine.say(message)
         tts_engine.runAndWait()
     

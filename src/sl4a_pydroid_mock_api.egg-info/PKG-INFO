@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: sl4a-pydroid-mock-api
-Version: 0.1
+Version: 0.2
 Summary: Simulates the  SL4A Python API for Android
-Home-page: http://github.com/brousch/sl4a_pydroid_api
+Home-page: http://github.com/brousch/sl4a_pydroid_mock_api
 Author: Ben Rousch
 Author-email: brousch@gmail.com
 License: BSD
@@ -51,6 +51,15 @@ Description: A Mock API for SL4A's Python Android API
         
         News
         ====
+        
+        0.2
+        ---
+        
+        *Release date: 16-Jul-2012*
+        
+        * Added support for makeToast via a Tkinter window.
+        * Added a shim module for TTS on OSX since I couldn't get PyTTSx working
+          outside of the OSX system Python.
         
         0.1
         ---
