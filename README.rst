@@ -26,8 +26,8 @@ Installation
 
 From your SL4A project's virtualenv: *pip install sl4a_pydroid_api*
 
-This creates an *android* module which you can import from just like a regular
-SL$A project.
+This creates an *android* module which you can import just like a regular
+SL4A project.
 
 Credits
 -------
