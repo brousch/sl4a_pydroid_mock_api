@@ -10,8 +10,18 @@ if sys.platform == "darwin":
     import tts_osx
     tts_engine = tts_osx.TtsEngine()
 else:
-    import pyttsx
-    tts_engine = pyttsx.init()
+    try:
+        import pyttsx
+        tts_engine = pyttsx.init()
+    except ImportError:
+        class _FakeTTSEngine(object):
+            def say(self, message):
+                print 'FakeTTS: %s' % message
+            
+            def runAndWait(self):
+                pause_for_realism()
+            
+        tts_engine = _FakeTTSEngine()
 
 
 # Pause for a little while for a more realistic experience from some methods
