@@ -6,21 +6,16 @@ README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
 
-version = '0.2'
+version = '0.3'
 
-install_requires = [
-                    'ez-setup==0.9',
-                    'pyttsx==1.1',
-                   ]
+install_requires = []
 
-dependency_links=[
-                  'http://github.com/parente/pyttsx/zipball/master#egg=pyttsx-1.1',
-                 ]
+dependency_links=[]
 
 
 setup(name='sl4a_pydroid_mock_api',
     version=version,
-    description="Simulates the  SL4A Python API for Android",
+    description="Simulates the SL4A Python API for Android",
     long_description=README + '\n\n' + NEWS,
     classifiers=[
                  'Development Status :: 4 - Beta',

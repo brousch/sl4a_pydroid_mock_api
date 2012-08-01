@@ -29,13 +29,30 @@ From your SL4A project's virtualenv: *pip install sl4a_pydroid_api*
 This creates an *android* module which you can import just like a regular
 SL4A project.
 
+Further Instructions for Text To Speech
+---------------------------------------
+On OSX, it uses the built-in 'say' program. No action is necessary.
+
+On Linux, you can install espeak and PyTTSx. Look for espeak in your distro's
+repositories. To install PyTTSx, issue the command *pip install -r 
+<venv>/lib/python2.6/site-packages/android/utils/requirements_pyttsx.txt*.
+
+This hasn't been tested on Windows, but theoretically you can install 
+NSSpeechSynthesizer and PyTTSx. To install PyTTSx, issue the command *pip install -r 
+<venv>/lib/python2.6/site-packages/android/utils/requirements_pyttsx.txt*.
+
+On Linux and Windows, if PyTTSx is not installed, it will fall back to playing
+no sound. The message that would've been spoken will be echoed to the output.
+
 Credits
 -------
 
 - `PyTTSx`_
-- `Distribute`_
+- `androidhelper`_
 - `modern-package-template`_
 
-.. _Distribute: http://pypi.python.org/pypi/distribute
-.. _`modern-package-template`: http://pypi.python.org/pypi/modern-package-template
 .. _PyTTSx: http://pypi.python.org/pyttsx
+.. _androidhelper: https://groups.google.com/forum/?fromgroups#!topic/python-for-android/a26ponFlgho
+.. _`modern-package-template`: http://pypi.python.org/pypi/modern-package-template
+
+.. 

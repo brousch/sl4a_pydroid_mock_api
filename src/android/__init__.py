@@ -14,45 +14,11 @@ else:
         import pyttsx
         tts_engine = pyttsx.init()
     except ImportError:
-        class _FakeTTSEngine(object):
-            def say(self, message):
-                print 'FakeTTS: %s' % message
-            
-            def runAndWait(self):
-                pause_for_realism()
-            
-        tts_engine = _FakeTTSEngine()
+        # If nothing else works, use the nosound option
+        import tts_nosound            
+        tts_engine = tts_nosound.FakeTTSEngine()
     
-try:
-    import androidhelper
-    """androidhelper is a modified copy from
-    https://groups.google.com/forum/?fromgroups#!topic/python-for-android/a26ponFlgho
-    or http://code.google.com/p/python-for-android/downloads/detail?name=androidhelper.py
-    
-    This provides doc strings from SL4A. androidhelper has been modified via:
-    
-        in_filename = 'androidhelper_r6.py'
-        out_filename = 'androidhelper.py'
-
-        fin = open(in_filename)
-        fout = open(out_filename, 'w')
-        for line in fin:
-            if line.startswith('import'):
-                line = '# ' + line
-            if line.startswith('class Android(android.Android):'):
-                line = line.replace('class Android(android.Android):', 'class Android:  # class Android(android.Android):')
-            '''
-            if line.startswith('class Android(android.Android):'):
-                line = line.replace('(android.Android)', '')
-            '''
-            if 'return' in line:
-                line = line.replace('return', 'raise NotImplementedError()  # return')
-            fout.write(line)
-        fout.close()
-        fin.close()
-    """
-except ImportError:
-    androidhelper = None
+import utils.androidhelper
 
 
 # Pause for a little while for a more realistic experience from some methods
@@ -81,16 +47,13 @@ def get_id():
 
 def copydoc(cls):
     # From https://groups.google.com/forum/?fromgroups#!topic/comp.lang.python/HkB1uhDcvdk
-     def _fn(fn):
-         if fn.__name__ in cls.__dict__:
-             fn.__doc__ = cls.__dict__[fn.__name__].__doc__
-         return fn
-     return _fn
+    def _fn(fn):
+        if fn.__name__ in cls.__dict__:
+            fn.__doc__ = cls.__dict__[fn.__name__].__doc__
+        return fn
+    return _fn
 
-if androidhelper is None:
-    parent_class = object
-else:
-    parent_class = androidhelper.Android
+parent_class = utils.androidhelper.Android
 
 class Android(parent_class):
     

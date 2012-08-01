@@ -1,6 +1,15 @@
 News
 ====
 
+0.3
+---
+
+*Release date: 22-Jul-2012
+
+* Added code supplied by clach04:
+* Made pyttsx optional with a nosound fallback (echoes to output)
+* Added docstrings for all Android methods from androidhelper project
+
 0.2
 ---
 

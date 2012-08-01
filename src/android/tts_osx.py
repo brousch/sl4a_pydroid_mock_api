@@ -8,12 +8,12 @@ import subprocess
 
 class TtsEngine():
     def __init__(self):
-        self.phrase = ""
+        self.message = ""
     
-    def say(self, phrase):
-        ''' Stores the phrase, doesn't actually speak yet'''
-        self.phrase = phrase
+    def say(self, message):
+        ''' Stores the message, doesn't actually speak yet'''
+        self.message = message
     
     def runAndWait(self):
-        ''' Speaks the stored phrase'''
-        subprocess.call(["say", self.phrase])
+        ''' Speaks the stored message'''
+        subprocess.call(["say", self.message])

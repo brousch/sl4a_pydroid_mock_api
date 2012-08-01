@@ -1,2 +1,0 @@
-ez-setup==0.9
-pyttsx==1.1
