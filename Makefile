@@ -7,6 +7,10 @@ PIP := $(VENV)/bin/pip
 generate_sdist: clean_dist clean_build clean_egginfo
 	$(PY) $(WD)/setup.py sdist
 
+.PHONY: upload_sdist
+upload_sdist:
+	$(PY) $(WD)/setup.py sdist upload
+
 .PHONY: clean_dist
 clean_dist:
 	rm -rf $(WD)/dist
