@@ -1,2 +1,0 @@
-ez-setup==0.9
-http://github.com/parente/pyttsx/zipball/master

@@ -4,20 +4,8 @@ import sys
 from collections import namedtuple
 
 import toast
+import ttsspeak
 
-# Initialize tts engine
-if sys.platform == "darwin":
-    import tts_osx
-    tts_engine = tts_osx.TtsEngine()
-else:
-    try:
-        import pyttsx
-        tts_engine = pyttsx.init()
-    except ImportError:
-        # If nothing else works, use the nosound option
-        import tts_nosound            
-        tts_engine = tts_nosound.FakeTTSEngine()
-    
 import utils.androidhelper
 
 
@@ -75,8 +63,7 @@ class Android(parent_class):
         
     @copydoc(parent_class)
     def ttsSpeak(self, message):
-        tts_engine.say(message)
-        tts_engine.runAndWait()
+        ttsspeak.ttsSpeak(message)
     
     
     @copydoc(parent_class)
