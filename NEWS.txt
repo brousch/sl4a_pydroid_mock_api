@@ -1,6 +1,14 @@
 News
 ====
 
+0.4
+---
+
+*Release date: 4-Oct-2012
+
+* Refactor of ttsSpeak due to no longer using PyTTSx
+* Added a Makefile for repetative tasks
+
 0.3
 ---
 

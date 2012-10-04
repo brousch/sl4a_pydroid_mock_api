@@ -1,6 +1,7 @@
 Roadmap for sl4a_pydroid_api
 ============================
 
-1. Use androidhelper to build out a more complete list of Android methods.
-2. Implement functions as I need them to the level of usefulness I need them.
-3. Add your contributions!
+1. Add tests for existing functionality
+2. Use androidhelper to build out a more complete list of Android methods.
+3. Implement functions as I need them to the level of usefulness I need them.
+4. Add your contributions!

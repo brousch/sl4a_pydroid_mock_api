@@ -33,26 +33,19 @@ Further Instructions for Text To Speech
 ---------------------------------------
 On OSX, it uses the built-in 'say' program. No action is necessary.
 
-On Linux, you can install espeak and PyTTSx. Look for espeak in your distro's
-repositories. To install PyTTSx, issue the command *pip install -r 
-<venv>/lib/python2.6/site-packages/android/utils/requirements_pyttsx.txt*.
+On Linux, you can install flite, a small, widely-available and free TTS program.
 
-This hasn't been tested on Windows, but theoretically you can install 
-NSSpeechSynthesizer and PyTTSx. To install PyTTSx, issue the command *pip install -r 
-<venv>/lib/python2.6/site-packages/android/utils/requirements_pyttsx.txt*.
+On Windows, we do not currently support any TTS.
 
-On Linux and Windows, if PyTTSx is not installed, it will fall back to playing
-no sound. The message that would've been spoken will be echoed to the output.
+If no TTS program can be found, it will default to printing the message to the
+console.
 
-Credits
+Special thanks to
 -------
 
-- `PyTTSx`_
 - `androidhelper`_
 - `modern-package-template`_
 
-.. _PyTTSx: http://pypi.python.org/pyttsx
 .. _androidhelper: https://groups.google.com/forum/?fromgroups#!topic/python-for-android/a26ponFlgho
 .. _`modern-package-template`: http://pypi.python.org/pypi/modern-package-template
 
-.. 

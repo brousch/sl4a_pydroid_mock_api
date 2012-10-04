@@ -34,18 +34,10 @@ ttsSpeak
 *Complete
 On OSX, it uses the built-in 'say' program. No action is necessary.
 
-On Linux, you can install espeak and PyTTSx. Look for espeak in your distro's
-repositories. To install PyTTSx, issue the command *pip install -r 
-<venv>/lib/python2.6/site-packages/android/utils/requirements_pyttsx.txt*.
+On Linux, you can install flite, a free, small, widely-avilable TTS program.
 
-This hasn't been tested on Windows, but theoretically you can install 
-NSSpeechSynthesizer and PyTTSx. To install PyTTSx, issue the command *pip install -r 
-<venv>/lib/python2.6/site-packages/android/utils/requirements_pyttsx.txt*.
+On Windows, we do not currently support any TTS engines.
 
-On Linux and Windows, if PyTTSx is not installed, it will fall back to playing
-no sound. The message that would've been spoken will be echoed to the output.
-Uses the PyTTSx module to provide text to speech on your computer. PyTTSx
-requires that you have an external TTS library or program installed. On Linux, 
-this is espeak. On OSX this is the NSSpeechSynthesizer. On Windows this is
-SAPI5.
+If no TTS functionality is found, it will default to printing the message to the
+console.
 
