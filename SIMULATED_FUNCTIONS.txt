@@ -32,11 +32,12 @@ ttsSpeak
 --------
 
 *Complete
-On OSX, it uses the built-in 'say' program. No action is necessary.
+On OSX, it uses the built-in 'say' program. No other action is necessary. If 
+for some reason 'say' is missing, you can install and use 'espeak'.
 
-On Linux, you can install flite, a free, small, widely-avilable TTS program.
+On Linux, you can install and use 'espeak' or 'flite'.
 
-On Windows, we do not currently support any TTS engines.
+On Windows, you can install and use 'espeak'.
 
 If no TTS functionality is found, it will default to printing the message to the
 console.

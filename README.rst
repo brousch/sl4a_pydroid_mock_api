@@ -29,13 +29,16 @@ From your SL4A project's virtualenv: *pip install sl4a_pydroid_api*
 This creates an *android* module which you can import just like a regular
 SL4A project.
 
-Further Instructions for Text To Speech
----------------------------------------
-On OSX, it uses the built-in 'say' program. No action is necessary.
+Further Instructions for Text To Speech (ttsSpeak)
+--------------------------------------------------
 
-On Linux, you can install flite, a small, widely-available and free TTS program.
+On OSX, it uses the built-in 'say' program. No other action is necessary. If 
+for some strange reason 'say' is missing, you can also install and use 
+`espeak`_.
 
-On Windows, we do not currently support any TTS.
+On Linux, you can install and use `espeak`_ or `flite`_.
+
+On Windows, you can install and use `espeak`_.
 
 If no TTS program can be found, it will default to printing the message to the
 console.
@@ -46,6 +49,8 @@ Special thanks to
 - `androidhelper`_
 - `modern-package-template`_
 
+.. _espeak: http://espeak.sourceforge.net/
+.. _flite: http://www.speech.cs.cmu.edu/flite/
 .. _androidhelper: https://groups.google.com/forum/?fromgroups#!topic/python-for-android/a26ponFlgho
 .. _`modern-package-template`: http://pypi.python.org/pypi/modern-package-template
 

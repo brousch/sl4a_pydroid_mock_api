@@ -1,16 +1,29 @@
 # Find some kind of TTS functionality and assign it to ttsSpeak
-# On OSX, we use the built-in TTS feature
+# On OSX, we look for:
+#     say: A TTS program included with OSX
+#          http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/say.1.html
+#     espeak: A free TTS program for Linux, Windows and OSX
+#             http://espeak.sourceforge.net/
 # On Linux, we look for:
-#     Flite, which is small and widely available
+#     espeak: A free TTS program for Linux, Windows and OSX
+#             http://espeak.sourceforge.net/
+#     flite, A free TTS program for 
 #            http://www.speech.cs.cmu.edu/flite/
-#     <Add other TTS engines here as they are implemented>
-# On Windows, we use notts, which just echoes the message to the console
+# On Windows, we look for:
+#     espeak: A free TTS program for Linux, Windows and OSX
+#             http://espeak.sourceforge.net/
+# If no TTS is found, we use notts, which just echoes the message to the console
 
 
 import subprocess
 import sys
 
 from utils import whereis_exe
+
+
+def ttsSpeak_espeak(message):
+    ''' Speaks the message using espeak '''
+    subprocess.call(["espeak", message])
 
 
 def ttsSpeak_flite(message):
@@ -33,12 +46,17 @@ ttsSpeak = ttsSpeak_notts
 
 # Platform-specific searches
 if sys.platform == "darwin":
-    ttsSpeak = ttsSpeak_osx
+    if whereis_exe('say'):
+        ttsSpeak = ttsSpeak_osx
+    elif whereis_exe('espeak'):
+        ttsSpeak = ttsSpeak_espeak
     
 elif sys.platform.startswith('linux'):
-    #Check for flite
-    if whereis_exe('flite'):
+    if whereis_exe('espeak'):
+        ttsSpeak = ttsSpeak_espeak
+    elif whereis_exe('flite'):
         ttsSpeak = ttsSpeak_flite
         
 elif sys.platform == "win32":
-    pass
+    if whereis_exe('espeak'):
+        tssSpeak = ttsSpeak_espeak

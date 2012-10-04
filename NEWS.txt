@@ -1,6 +1,13 @@
 News
 ====
 
+0.4.1
+-----
+
+*Release date: 4-Oct-2012
+
+* Added espeak support to ttsSpeak for OSX, Linux, and Windows
+
 0.4
 ---
 
